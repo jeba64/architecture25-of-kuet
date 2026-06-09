@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUET Architecture'25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="logo">Arch-25</a>
+  <ul class="nav-menu" id="desktop-menu"></ul>
+  <button class="menu-toggle" id="menu-btn" aria-label="Toggle menu">
+    <svg id="menu-icon" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+
+<main>
+
+  <div class="page-hero">
+    <p class="label">Contact</p>
+    <h1>GET IN<br>TOUCH</h1>
+    <p>Reach out to the KUET Architecture Batch 2025 collective for collaborations, queries, or anything related to our work.</p>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- Info -->
+    <div class="contact-info">
+      <div class="contact-item">
+        <p class="ci-label">// Location</p>
+        <p class="ci-value">Khulna University of Engineering &amp; Technology<br>Khulna — 9203, Bangladesh</p>
+      </div>
+      <div class="contact-item">
+        <p class="ci-label">// Department</p>
+        <p class="ci-value">Department of Architecture<br>B.Arch Program — Batch 2025</p>
+      </div>
+      <div class="contact-item">
+        <p class="ci-label">// Email</p>
+        <p class="ci-value">arch25@kuet.ac.bd</p>
+      </div>
+      <div class="contact-item">
+        <p class="ci-label">// Social</p>
+        <p class="ci-value">Facebook Group: KUET Archi '25<br>Instagram: @kuet.arch25</p>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="What is this about?">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="handleSubmit()">Send Message</button>
+      <p id="form-status" style="font-family:var(--mono); font-size:12px; color:var(--accent); margin-top:8px; display:none;"></p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="archi-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>## KUET_ARCHI</h3>
+      <p>Architecture Student Group</p>
+      <p>Admission: 2025_KUET_ARCH</p>
+      <p>Batch Size: 40 Students</p>
+    </div>
+    <div class="footer-section">
+      <h3>// STATUS &amp; INFO</h3>
+      <p><strong>System Status:</strong> Active</p>
+      <p><strong>Location:</strong> 23.7277° N, 90.3911° E</p>
+      <p><strong>Place Ref:</strong> KUET, Khulna</p>
+    </div>
+    <div class="footer-section">
+      <h3>// NAVIGATION</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Album</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>// UTILITIES</h3>
+      <div class="live-clock-box">
+        <p><strong>Date:</strong> <span id="live-date">--/--/----</span></p>
+        <p><strong>Time:</strong> <span id="live-time">--:--:-- --</span></p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <h1>© 2026 KUET STUDENTS GROUP // ARCHITECTURE_DEPT</h1>
+    </div>
+    <div class="footer-version"><p>KUET_Archi_Web</p></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  function handleSubmit() {
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const status  = document.getElementById('form-status');
+
+    if (!name || !email || !message) {
+      status.textContent = '// ERROR: Please fill in all required fields.';
+      status.style.color = '#e74c3c';
+      status.style.display = 'block';
+      return;
+    }
+    // এখানে তোমার backend/email service এর fetch() call যোগ করো
+    status.textContent = '// MESSAGE_SENT: We will get back to you soon.';
+    status.style.color = '#4ade80';
+    status.style.display = 'block';
+  }
+</script>
+</body>
+</html>

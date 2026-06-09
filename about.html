@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUET Architecture'25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="logo">Arch-25</a>
+  <ul class="nav-menu" id="desktop-menu"></ul>
+  <button class="menu-toggle" id="menu-btn" aria-label="Toggle menu">
+    <svg id="menu-icon" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+
+<main>
+
+  <div class="page-hero">
+    <p class="label">About</p>
+    <h1>WHO<br>WE ARE</h1>
+    <p>A collective of 40 architecture students at KUET, united by a passion for design, space, and the built environment.</p>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="about-content">
+
+    <!-- Left: Stats -->
+    <div>
+      <div class="about-stats">
+        <div class="stat-block">
+          <div class="stat-num">40</div>
+          <div class="stat-label">Students</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">01</div>
+          <div class="stat-label">Batch</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Year Program</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">25</div>
+          <div class="stat-label">Admission Year</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 4px;">
+        <p style="font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">// LOCATION</p>
+        <p style="font-size: 14px; color: var(--text-muted); line-height: 1.8;">
+          Khulna University of Engineering &amp; Technology<br>
+          Khulna — 9203, Bangladesh<br>
+          <span style="color: var(--text-dim); font-family: var(--mono); font-size: 11px;">23.7277° N, 89.5644° E</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: Text -->
+    <div class="about-text">
+      <p>
+        KUET Architecture Batch 2025 is the newest cohort of the Department of Architecture at Khulna University of Engineering &amp; Technology — one of the leading technical universities in Bangladesh.
+      </p>
+      <p>
+        This website serves as our collective digital archive — a space to document our studio work, academic projects, and shared experiences throughout our five-year journey in architectural education.
+      </p>
+
+      <h3>The Department</h3>
+      <p>
+        The Department of Architecture at KUET offers a rigorous five-year B.Arch program combining technical knowledge with creative design thinking. Students engage with studios, workshops, site visits, and interdisciplinary courses that prepare them for professional architectural practice.
+      </p>
+      <p>
+        The department maintains strong ties with the architectural community of Bangladesh and fosters a culture of critical inquiry, design excellence, and social responsibility in the built environment.
+      </p>
+
+      <h3>This Website</h3>
+      <p>
+        Built entirely by students of Batch 2025, this platform is an ongoing project — growing alongside us as we progress through our academic years. Media, projects, and student profiles will be updated each semester.
+      </p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="archi-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>## KUET_ARCHI</h3>
+      <p>Architecture Student Group</p>
+      <p>Admission: 2025_KUET_ARCH</p>
+      <p>Batch Size: 40 Students</p>
+    </div>
+    <div class="footer-section">
+      <h3>// STATUS &amp; INFO</h3>
+      <p><strong>System Status:</strong> Active</p>
+      <p><strong>Location:</strong> 23.7277° N, 90.3911° E</p>
+      <p><strong>Place Ref:</strong> KUET, Khulna</p>
+    </div>
+    <div class="footer-section">
+      <h3>// NAVIGATION</h3>
+      <ul class="footer-links">
+         <li><a href="index.html">Album</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>// UTILITIES</h3>
+      <div class="live-clock-box">
+        <p><strong>Date:</strong> <span id="live-date">--/--/----</span></p>
+        <p><strong>Time:</strong> <span id="live-time">--:--:-- --</span></p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <h1>© 2026 KUET STUDENTS GROUP // ARCHITECTURE_DEPT</h1>
+    </div>
+    <div class="footer-version"><p>KUET_Archi_Web</p></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

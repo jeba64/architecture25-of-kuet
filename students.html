@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUET Architecture'25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="logo">Arch-25</a>
+  <ul class="nav-menu" id="desktop-menu"></ul>
+  <button class="menu-toggle" id="menu-btn" aria-label="Toggle menu">
+    <svg id="menu-icon" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+
+<main>
+
+  <div class="page-hero">
+    <p class="label">Students</p>
+    <h1>BATCH<br>2025</h1>
+    <p>All 40 students admitted into the Department of Architecture, KUET — Batch of 2025.</p>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="students-grid" id="students-grid">
+    <!-- JS দিয়ে populate হবে -->
+  </div>
+
+</main>
+
+<footer class="archi-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>## KUET_ARCHI</h3>
+      <p>Architecture Student Group</p>
+      <p>Admission: 2025_KUET_ARCH</p>
+      <p>Batch Size: 40 Students</p>
+    </div>
+    <div class="footer-section">
+      <h3>// STATUS &amp; INFO</h3>
+      <p><strong>System Status:</strong> Active</p>
+      <p><strong>Location:</strong> 23.7277° N, 90.3911° E</p>
+      <p><strong>Place Ref:</strong> KUET, Khulna</p>
+    </div>
+    <div class="footer-section">
+      <h3>// NAVIGATION</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Album</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>// UTILITIES</h3>
+      <div class="live-clock-box">
+        <p><strong>Date:</strong> <span id="live-date">--/--/----</span></p>
+        <p><strong>Time:</strong> <span id="live-time">--:--:-- --</span></p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <h1>© 2026 KUET STUDENTS GROUP // ARCHITECTURE_DEPT</h1>
+    </div>
+    <div class="footer-version"><p>KUET_Archi_Web</p></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // ── STUDENTS DATA ──
+  // এখানে তোমার actual student names ও roll যোগ করো
+  
+   
+
+ const STUDENTS = [
+  { "roll": "2525001", "name": "Sadia Islam", "image": "images/1.jpg" },
+  { "roll": "2525002", "name": "Plabita Sarkar Promi", "image": "images/2.jpg" },
+  { "roll": "2525003", "name": "Maria Akhter", "image": "images/3.jpg" },
+  { "roll": "2525004", "name": "Tahrim Borshon", "image": "images/4.jpg" },
+  { "roll": "2525005", "name": "Imtiaz Abedin Shihab", "image": "images/5.jpg" },
+  { "roll": "2525006", "name": "Debjyoti Chakraborty", "image": "images/6.jpg" },
+  { "roll": "2525007", "name": "Fahmida Nawshin Muntaha", "image": "images/7.jpg" },
+  { "roll": "2525008", "name": "Afrah Zahin", "image": "images/8.jpg" },
+  { "roll": "2525009", "name": "Simona Rusmiah", "image": "images/9.jpg" },
+  { "roll": "2525010", "name": "Mobashshira Tasnia Purna", "image": "images/10.jpg" },
+
+  { "roll": "2525012", "name": "Annuna Islam Prova", "image": "images/12.jpg" },
+  { "roll": "2525013", "name": " ", "image": "" },
+  { "roll": "2525014", "name": "Jenifa Erin", "image": "images/14.jpg" },
+  { "roll": "2525015", "name": "Esrat Jahan Esha", "image": "images/15.jpg" }, 
+  { "roll": "2525016", "name": "Rubaina Mehzabin", "image": "images/16.jpg" },
+  { "roll": "2525017", "name": "Upoma Biswas", "image": "images/17.jpg" },
+  { "roll": "2525018", "name": "Saifuzzaman Oshan", "image": "images/18.jpg" },
+  { "roll": "2525019", "name": "Susme Das", "image": "images/19.jpg" },
+  { "roll": "2525020", "name": "Ushrat Fahmidah", "image": "images/20.jpg" },
+  { "roll": "2525021", "name": "Anika Tabassum", "image": "images/21.jpg" },
+  { "roll": "2525022", "name": "Mahima Binte Mujib (Mahi)", "image": "images/22.jpg" },
+  { "roll": "2525023", "name": " ", "image": "images/23.jpg" },
+  
+  { "roll": "2525024", "name": "Suchi Chowdhury", "image": "images/24.jpg" },
+  { "roll": "2525025", "name": "Sadia Mirza Shara", "image": "images/25.jpg" }, 
+  { "roll": "2525026", "name": "Rifat Mahmud", "image": ".jpg" },
+  { "roll": "2525027", "name": "Tasnia Tahosin Toushe", "image": "images/27.jpg" }, 
+   { "roll": "2525028", "name": " ", "image": "images/28.jpg" },
+  { "roll": "2525029", "name": "Mahia Mamun Trina", "image": "images/29.jpg" },
+  { "roll": "2525030", "name": "Ragib Hasan Emon", "image": "images/30.jpg" }, 
+  { "roll": "2525031", "name": "Morsalin Alam Samin", "image": "images/31.jpg" },
+  { "roll": "2525032", "name": "Methila Islam Mridula", "image": "images/32.jpg" }, 
+   { "roll": "2525033", "name": " ", "image": "images/33.jpg" },
+  { "roll": "2525034", "name": "Nisa Ahmed Nujhat", "image": "images/34.jpg" },
+  { "roll": "2525035", "name": "Atia Ibnat Tuha", "image": "images/35.jpg" },
+   { "roll": "2525036", "name": " ", "image": "images/36.jpg" },
+  { "roll": "2525037", "name": "Amin Ahmmed", "image": "images/37.jpg" },
+  { "roll": "2525038", "name": "Maryam Akhter Sadia", "image": "images/38.jpg" },
+  { "roll": "2525039", "name": "Mahima Hasan", "image": "images/39.jpg" }, 
+  { "roll": "2525040", "name": "Shammah Ali", "image": "images/40.jpg" }
+];
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('students-grid');
+  if (!grid) return;
+  grid.innerHTML = STUDENTS.map((s, i) => `
+    <div class="student-card">
+      
+      <img src="${s.image}" alt="${s.name}" class="student-img" onerror="this.onerror=null; this.src='images/default.jpg';">
+      <p class="student-name">${s.name}</p>
+      <p class="student-roll">${s.roll}</p>
+    </div>
+  `).join('');
+});
+
+</script>
+</body>
+</html>
